@@ -9,13 +9,14 @@ Hub-and-specialist Grok Bot system for evidence-based body recomposition — str
 
 ## Overview
 
-This repository documents the **Physique Team**: a structured Grok Bot system consisting of a central hub (Physique Desk) and three specialist bots for evidence-based body recomposition.
+This repository documents the **Physique Team**: a structured Grok Bot system consisting of a central hub (Physique Desk) and five specialist bots for evidence-based body recomposition, recovery, nutrition, research, and medical lab organization.
 
 - **Hub**: Physique Desk — owns training split (A/B/C upper/lower/full-body), progression rules, macro anchors (~170 g protein floor, gym carbs 120–150 g cooked starch, rest ~100 g), weekly tracking, and specialist orchestration.
 - **Specialists**:
   - **Load & Recovery** — Garmin Connect MCP → traffic light (green/yellow/red) + 1–3 weekly adjustments
   - **Recomp Nutrition** — turns anchors into flexible menus, shopping lists, portion micro-adjustments (uses MyFitnessPal MCP when diary exists)
   - **Evidence Desk** — sport science / hypertrophy / nutrition papers on demand → dated claim+source bullets + practical implication
+  - **Labs Prep** — organizes medical labs/analyses user uploads into package for real sports medicine doctor (inventory, dates, raw values, questions for appointment)
 
 **Privacy**: This repo contains **no** API keys, cookies, OAuth tokens, emails, weights, HRV series, food diaries, or workout IDs. Connector names only. See `docs/CONNECTORS.md`.
 
@@ -69,6 +70,18 @@ This repository documents the **Physique Team**: a structured Grok Bot system co
 
 **Physique Desk** translates evidence into concrete plan.
 
+### 5. Labs Prep
+
+**One job**: Organize medical labs/analyses user uploads into package for real sports medicine doctor.
+
+**Framework**: Inventory (test type, date, source) + raw values as written + questions for appointment.
+
+**Rules**:
+- No diagnosis, no lab interpretation, no inventing values
+- No prescribing drugs, does not change Physique Desk/Recomp/Load plans
+- Not Evidence Desk (papers) — clinical reading is the real doctor
+- If medical red flag → say see real doctor and stop
+
 ---
 
 ## Architecture
@@ -83,7 +96,8 @@ agents/physique/
 │   └── tools.md
 ├── load-recovery/     # Load & Recovery specialist
 ├── recomp-nutrition/  # Recomp Nutrition specialist
-└── evidence-desk/     # Evidence Desk specialist
+├── evidence-desk/     # Evidence Desk specialist
+└── labs-prep/         # Labs Prep specialist
 ```
 
 Each bot includes: `README.md`, `persona.md`, `CONTEXT.md`, `tools.md`.
@@ -95,11 +109,12 @@ Each bot includes: `README.md`, `persona.md`, `CONTEXT.md`, `tools.md`.
 Full workflow documented in `docs/SOP.md`:
 
 ### Roles
-- **User**: Logs gym in Hevy (when ready), food in MyFitnessPal, wears Garmin.
+- **User**: Logs gym in Hevy (when ready), food in MyFitnessPal, wears Garmin, uploads labs when needed.
 - **Physique Desk**: Hub — split, progression, macro anchors.
 - **Load & Recovery**: Garmin → traffic light + 1–3 adjustments.
 - **Recomp Nutrition**: Menus/swaps within anchors; MFP vs protein.
 - **Evidence Desk**: Papers on demand.
+- **Labs Prep**: Organizes medical labs for doctor appointment.
 - **Chief**: General triage only (NOT recomp owner).
 
 ### Cadence
@@ -122,22 +137,6 @@ Full workflow documented in `docs/SOP.md`:
 ## Connectors
 
 See `docs/CONNECTORS.md` for full connector map (names only — no secrets).
-
-### Pending Connections (live MCPs, awaiting user action)
-
-**Important**: These connections are NOT forgotten — MCPs are connected live, system fully designed, waiting on user action. See `docs/PENDING_CONNECTIONS.md` for complete detail.
-
-#### 1. Hevy MCP: Routine Template Upload
-- ✅ **MCP connected live**
-- ⏳ **Pending**: User request to upload A/B/C + core templates
-- 🎯 **Next step**: User says "upload A/B/C to Hevy" → Physique Desk creates routine templates via Hevy MCP
-- **After upload**: Desk reads Hevy logs for automatic progression feedback
-
-#### 2. MyFitnessPal MCP: Nutrition Loop Closure
-- ✅ **MCP connected live**
-- ⏳ **Pending**: Real diary days from user
-- 🎯 **Next step**: User logs food in MFP (2–3 days minimum)
-- **After first logs**: Recomp Nutrition compares intake vs ~170 g protein anchor, identifies gaps, personalizes recommendations
 
 ---
 
@@ -172,7 +171,6 @@ Uses example placeholders where necessary (`USER`, `~170 g protein`, `afternoon 
 
 - **`docs/SOP.md`** — Complete workflow and cadence
 - **`docs/CONNECTORS.md`** — Connector map, no secrets
-- **`docs/PENDING_CONNECTIONS.md`** — Hevy/MFP connections: live, designed, awaiting user
 - **`docs/PERSONA_VS_CODE.md`** — Persona (live Grok) vs this repo (versioned)
 - **`knowledge/`** — Literature summaries (Schoenfeld, Renaissance Diet 2.0, McDonald, etc.)
 - **`agents/physique/<bot>/`** — README, persona, context, tools per bot

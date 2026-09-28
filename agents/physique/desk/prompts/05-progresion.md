@@ -60,7 +60,7 @@ Physique Desk usa **Hevy MCP** para:
 - Comparar con sesión anterior.
 - Dar feedback: "Subiste de 60 kg × 10 a 60 kg × 12 → próxima sesión intenta 62.5 kg".
 
-**Pendiente**: USER necesita registrar sets/reps en Hevy para que este ciclo funcione. Mientras tanto, Physique Desk da reglas generales.
+**Cuando USER empieza a usar Hevy**: el ciclo de feedback se automatiza con datos reales. Mientras tanto, Physique Desk da reglas generales basadas en los principios de progresión.
 
 ## Progresión según experiencia
 
@@ -88,7 +88,7 @@ Progresión para USER:
 3. Si estancado 2 sesiones → descarga o micro-ajuste.
 4. Si técnica se degrada → NO subir peso.
 5. Descarga cada 6–8 semanas o cuando Load & Recovery da semáforo rojo.
-6. Tracking en Hevy (pendiente: USER registra sets/reps).
+6. Tracking en Hevy (cuando USER empiece a registrar sets/reps).
 ```
 
 Estas reglas alimentan **Prompt 06 (Tracker semanal)** y **Prompt 07 (Recuperación)**.

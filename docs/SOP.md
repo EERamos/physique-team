@@ -54,6 +54,16 @@ Flujo de trabajo completo para el sistema Physique Team.
   - 1–2 líneas de implicación práctica (NO reescribe rutina completa).
 - **Physique Desk** traduce evidencia en plan concreto.
 
+### Labs Prep
+- **SOLO**: organizar laboratorios/análisis médicos que USER sube.
+- **Salida**:
+  - Inventario (tipo de lab, fecha, fuente/laboratorio).
+  - Valores en bruto tal como aparecen escritos (NO interpretación clínica).
+  - Preguntas para la cita con médico deportivo real.
+  - Checklist de labs faltantes si es incompleto.
+- **NO diagnóstico médico**: nunca interpretar valores, nunca prescribir medicamentos/suplementos, nunca cambiar planes Physique Desk/Recomp/Load (eso es trabajo de esos bots + médico real si es necesario).
+- **Bandera roja médica** (valores extremos, síntomas graves) → decir "ve a tu médico real" y parar.
+
 ### Chief (triage general)
 - **NO** dueño de recomposición.
 - Puede redirigir a Physique Desk u otro bot cuando sea necesario.
@@ -66,6 +76,7 @@ Flujo de trabajo completo para el sistema Physique Team.
 | Cardio/outdoor | **Strava** o **Garmin** (no ambos para el mismo esfuerzo) |
 | Recuperación (sueño, HRV, body battery) | **Garmin** |
 | Comida/peso | **MyFitnessPal** |
+| Labs médicos | **Archivos subidos por usuario** (Labs Prep organiza) |
 
 ## Cadencia
 
@@ -79,33 +90,18 @@ Flujo de trabajo completo para el sistema Physique Team.
 - Menú del día → Recomp Nutrition genera opciones.
 - Pase de carga (si síntomas de fatiga) → Load & Recovery revisa Garmin y da semáforo.
 - Pregunta de evidencia → Evidence Desk responde con papers + implicación práctica.
+- "Organiza mis labs" → Labs Prep genera inventario + preguntas para médico deportivo real.
 
 ### Después de registro
 - **Después de registro Hevy** (sets/reps) → Physique Desk revisa progresión y da nota de feedback.
 - **Después de días de diario MFP** → Recomp Nutrition revisa brechas (¿llegó a ~170 g proteína? ¿necesita ajustes?).
-
-## Pendiente (TODO documentado, no inventado)
-
-**IMPORTANTE**: Estas dos conexiones NO están olvidadas — MCPs conectados en vivo, sistema diseñado, esperando acción del usuario. Ver `docs/PENDING_CONNECTIONS.md` para detalles completos.
-
-1. **Subir rutinas A/B/C + core a Hevy** cuando el usuario lo solicite.
-   - Hevy MCP: ✅ conectado en vivo.
-   - Hevy soporta templates de rutina.
-   - Rutinas viven actualmente en Physique Desk (memoria/contexto).
-   - Pendiente: usuario pide "sube A/B/C a Hevy" → bot usa Hevy MCP para crear templates.
-   - Después: Physique Desk lee logs de Hevy para feedback de progresión real.
-
-2. **Primeros registros reales Hevy/MFP** para cerrar el ciclo.
-   - MyFitnessPal MCP: ✅ conectado en vivo.
-   - Una vez que usuario registre sets/reps en Hevy → Physique Desk puede dar feedback de progresión real.
-   - Una vez que usuario registre comida en MFP → Recomp Nutrition puede comparar vs ~170 g proteína.
-   - Pendiente: primeros días reales de diario MFP.
+- **Después de subir labs médicos** → Labs Prep genera inventario + preguntas para cita con médico.
 
 ## Anti-trabajos (todos los bots)
 
 - **No** fantasy NFL / Polymarket.
-- **No** inventar laboratorios médicos / resultados de labs.
-- **No** prescribir medicamentos.
+- **No** inventar laboratorios médicos / resultados de labs (Labs Prep organiza labs reales subidos, nunca inventa valores).
+- **No** prescribir medicamentos (Labs Prep deriva a médico real, no prescribe).
 - **No** publicaciones externas (X, Slack, etc.) sin autorización explícita del usuario.
 - **No** compartir datos personales fuera del grupo Physique Team.
 
