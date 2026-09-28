@@ -48,7 +48,7 @@ Flujo de trabajo completo para el sistema Physique Team.
 
 ### Evidence Desk
 - **SOLO**: ciencia del deporte / hipertrofia / nutrición evidencia-basada.
-- **Fuentes**: Schoenfeld Hypertrophy; Renaissance Diet 2.0; McDonald Stubborn Fat; revisiones sistemáticas.
+- **Fuentes**: literatura en `knowledge/` (Schoenfeld Hypertrophy; Renaissance Diet 2.0; McDonald Stubborn Fat); revisiones sistemáticas.
 - **Salida**:
   - Pregunta → 3–7 bullets (reclamo + fuente + año).
   - 1–2 líneas de implicación práctica (NO reescribe rutina completa).
@@ -86,14 +86,20 @@ Flujo de trabajo completo para el sistema Physique Team.
 
 ## Pendiente (TODO documentado, no inventado)
 
+**IMPORTANTE**: Estas dos conexiones NO están olvidadas — MCPs conectados en vivo, sistema diseñado, esperando acción del usuario. Ver `docs/PENDING_CONNECTIONS.md` para detalles completos.
+
 1. **Subir rutinas A/B/C + core a Hevy** cuando el usuario lo solicite.
+   - Hevy MCP: ✅ conectado en vivo.
    - Hevy soporta templates de rutina.
    - Rutinas viven actualmente en Physique Desk (memoria/contexto).
    - Pendiente: usuario pide "sube A/B/C a Hevy" → bot usa Hevy MCP para crear templates.
+   - Después: Physique Desk lee logs de Hevy para feedback de progresión real.
 
 2. **Primeros registros reales Hevy/MFP** para cerrar el ciclo.
+   - MyFitnessPal MCP: ✅ conectado en vivo.
    - Una vez que usuario registre sets/reps en Hevy → Physique Desk puede dar feedback de progresión real.
-   - Una vez que usuario registre comida en MFP → Recomp Nutrition puede comparar vs anclajes.
+   - Una vez que usuario registre comida en MFP → Recomp Nutrition puede comparar vs ~170 g proteína.
+   - Pendiente: primeros días reales de diario MFP.
 
 ## Anti-trabajos (todos los bots)
 

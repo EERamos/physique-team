@@ -45,6 +45,7 @@ Este repositorio documenta el **Physique Team**: sistema Grok Bot de coach hub +
 - **SOLO**: ciencia del deporte / hipertrofia / evidencia de nutrición con reclamos fechados + fuentes (Schoenfeld Hypertrophy; Renaissance Diet 2.0; McDonald Stubborn Fat; revisiones).
 - **Salida**: pregunta → 3–7 bullets reclamo+fuente+año → 1–2 líneas implicación práctica (no reescribe rutina completa).
 - Physique Desk traduce en plan.
+- **Literatura de referencia**: ver `knowledge/` para resúmenes accionables de libros clave (sin PDFs completos).
 
 ### Arquitectura
 
@@ -79,6 +80,8 @@ Flujo documentado en `docs/SOP.md`:
 
 Ver `docs/CONNECTORS.md` para mapa de conectores (solo nombres — sin secretos).
 
+**Conexiones pendientes**: Hevy MCP y MyFitnessPal MCP están conectados en vivo, sistema diseñado, esperando acción del usuario / primeros logs. Ver `docs/PENDING_CONNECTIONS.md` para detalles.
+
 ### Privacidad
 
 Este repositorio público contiene **cero**:
@@ -103,6 +106,8 @@ MIT — ver `LICENSE`.
 ## Documentación adicional
 
 - `docs/SOP.md` — workflow completo.
-- `docs/PERSONA_VS_CODE.md` — persona Grok (en vivo) vs este repo (versionado).
 - `docs/CONNECTORS.md` — mapa de conectores, sin secretos.
+- `docs/PENDING_CONNECTIONS.md` — conexiones Hevy/MFP: live, diseñadas, esperando usuario.
+- `docs/PERSONA_VS_CODE.md` — persona Grok (en vivo) vs este repo (versionado).
+- `knowledge/` — resúmenes de literatura (Schoenfeld, Renaissance Diet 2.0, McDonald, etc.).
 - `agents/physique/<bot>/` — README, persona, contexto, herramientas por bot.

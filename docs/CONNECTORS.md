@@ -30,7 +30,7 @@ This document lists the MCP connectors used by the Physique Team bots **by name 
 
 ### Evidence Desk
 - **No live data connectors**.
-- Purely paper/research lookup (Schoenfeld, Renaissance Diet 2.0, McDonald, systematic reviews).
+- Purely paper/research lookup (see `knowledge/` for book summaries: Schoenfeld, Renaissance Diet 2.0, McDonald, systematic reviews).
 
 ## Important notes
 
@@ -57,8 +57,10 @@ If you are setting up your own Physique Team clone:
 
 ## Pending connector work (TODO)
 
-- **Hevy routine upload**: User needs to say "upload A/B/C to Hevy" → bot uses Hevy MCP to create routine templates.
-- **First real logs**: Once user logs strength in Hevy and food in MFP, close-the-loop feedback from bots becomes possible.
+**IMPORTANT**: These connections are NOT forgotten — MCPs are connected live, system fully designed, waiting on user action / first logs. See `docs/PENDING_CONNECTIONS.md` for full detail.
+
+- **Hevy routine upload**: ✅ MCP connected. User needs to say "upload A/B/C to Hevy" → bot uses Hevy MCP to create routine templates. After upload, Desk reads Hevy logs for progression feedback.
+- **First real logs**: ✅ MyFitnessPal MCP connected. Once user logs strength in Hevy and food in MFP, close-the-loop feedback from bots becomes possible. Recomp Nutrition compares diary vs ~170 g protein anchor.
 
 ---
 

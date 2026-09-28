@@ -68,6 +68,8 @@ Ver `prompts/01-marco.md` a `prompts/08-sistema-completo.md` para el framework d
 
 Ver `tools.md` para lista de conectores MCP.
 
+**Conexiones pendientes**: Hevy MCP (subir templates A/B/C cuando usuario pida) y MyFitnessPal MCP (comparar diario real vs anclajes) están conectados y diseñados — esperando acción del usuario. Ver `docs/PENDING_CONNECTIONS.md`.
+
 ## Context
 
 Ver `CONTEXT.md` para contexto genérico de coaching (preferencias de timing, restricciones generales, etc. — sin datos personales específicos).
