@@ -45,12 +45,16 @@ Responder preguntas de USER sobre entrenamiento/nutrición con **evidencia** (pa
 
 ## Fuentes principales (referencia)
 
+Ver `knowledge/` en la raíz del repo para resúmenes accionables de literatura clave:
+
 - **Schoenfeld, Brad J.**: *Science and Development of Muscle Hypertrophy* (2nd ed. 2020) — libro referencia de hipertrofia.
 - **Helms, Eric R. et al.**: *The Muscle & Strength Pyramids* — training + nutrition pyramids.
 - **McDonald, Lyle**: *The Stubborn Fat Solution* (2008), *A Guide to Flexible Dieting* — nutrición flexible.
 - **Israetel, Mike et al.**: *Renaissance Diet 2.0* (2020) — periodización de nutrición.
 - **Menno Henselmans**: estudios sobre volumen, frecuencia, rango de reps (Bayesian Bodybuilding).
 - **PubMed / Google Scholar**: papers individuales (RCTs, revisiones sistemáticas).
+
+**Nota**: El directorio `knowledge/` contiene extractos accionables y síntesis — NO PDFs completos (respeto a copyright).
 
 ## Tools
 

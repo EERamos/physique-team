@@ -1,108 +1,182 @@
 # Physique Team
 
-Sistema de bots especialistas para recomposición corporal — versión pública del equipo Grok Bot de Eduardo E. Ramos.
+Hub-and-specialist Grok Bot system for evidence-based body recomposition — strength training, progressive overload, flexible nutrition, and recovery.
 
-## English
-
-This repository scaffolds the **Physique Team**: a hub-and-specialist Grok Bot system for evidence-based body recomposition (strength training, progressive overload, flexible nutrition, recovery).
-
-- **Hub**: Physique Desk — owns training split (A/B/C upper/lower/full-body), progression, macro anchors (~170 g protein, gym carbs 120–150 g, rest ~100 g), weekly tracker.
-- **Specialists**:
-  - Load & Recovery — Garmin Connect MCP → traffic light + 1–3 weekly adjustments.
-  - Recomp Nutrition — turns anchors into flexible menus, shopping lists, portion micro-adjusts (uses MyFitnessPal MCP when diary exists).
-  - Evidence Desk — sport science / hypertrophy / nutrition papers on demand (Schoenfeld, Renaissance Diet 2.0, McDonald, etc.) → dated claim+source bullets + practical implication.
-
-**Privacy**: This repo contains **no** API keys, cookies, OAuth tokens, emails, weights, HRV series, food diaries, or workout IDs. Connector names only. See `docs/CONNECTORS.md`.
-
-**Owner**: [@EERamos](https://github.com/EERamos)
+**Owner**: [@EERamos](https://github.com/EERamos)  
+**License**: MIT (see `LICENSE`)
 
 ---
 
-## Español
+## Overview
 
-Este repositorio documenta el **Physique Team**: sistema Grok Bot de coach hub + especialistas para recomposición corporal (entrenamiento de fuerza, sobrecarga progresiva, nutrición flexible, recuperación basada en evidencia).
+This repository documents the **Physique Team**: a structured Grok Bot system consisting of a central hub (Physique Desk) and three specialist bots for evidence-based body recomposition.
 
-### Agentes
+- **Hub**: Physique Desk — owns training split (A/B/C upper/lower/full-body), progression rules, macro anchors (~170 g protein floor, gym carbs 120–150 g cooked starch, rest ~100 g), weekly tracking, and specialist orchestration.
+- **Specialists**:
+  - **Load & Recovery** — Garmin Connect MCP → traffic light (green/yellow/red) + 1–3 weekly adjustments
+  - **Recomp Nutrition** — turns anchors into flexible menus, shopping lists, portion micro-adjustments (uses MyFitnessPal MCP when diary exists)
+  - **Evidence Desk** — sport science / hypertrophy / nutrition papers on demand → dated claim+source bullets + practical implication
 
-#### 1. Physique Desk (hub)
-- **Rol**: coach recomposición — evaluación de marco, entrenamiento (fuerza/hipertrofia), anclajes de nutrición, progresión, tracker semanal, orquestación de recuperación.
-- **Framework**: 8 prompts (analizar marco → entrenamiento → nutrición recomp → guía de comidas → progresión → tracker → recuperación → sistema completo).
-- **Anti-trabajos**: fantasy NFL / Polymarket; inventar laboratorios médicos; prescribir medicamentos; publicaciones externas sin autorización.
-- **Voz**: español, claro, accionable, sin exageración.
-- **Dueño de**: división A/B/C, reglas de progresión, anclajes de macros (~170 g proteína piso práctico; carbos gym 120–150 g almidón cocido, resto ~100 g).
+**Privacy**: This repo contains **no** API keys, cookies, OAuth tokens, emails, weights, HRV series, food diaries, or workout IDs. Connector names only. See `docs/CONNECTORS.md`.
 
-#### 2. Load & Recovery
-- **SOLO**: interpretar datos Garmin Connect MCP (sueño, pasos, HRV, body battery, estrés, preparación, actividades, training status) → semáforo + 1–3 ajustes semanales.
-- **Framework**: medido → significado de fatiga → cambio (volumen, timing, LISS, sueño, descarga).
-- Silencioso si no hay sincronización útil. Nunca diagnóstico/prescripción. Duración de fuerza en Garmin NO es proxy de volumen.
+---
 
-#### 3. Recomp Nutrition
-- **SOLO**: convertir anclajes en comida diaria — menús flexibles, equivalentes Denisse Lizarraga (plan oct 2025 como guía de porciones), lista de compras, antojos/alcohol, micro-ajustes de porción desde reportes de peso/cintura/fotos.
-- NO cambia kcal/anclajes de proteína ni división de gym solo (Physique Desk cierra esos).
-- Usa MyFitnessPal MCP cuando existe diario; compara vs ~170 g proteína.
+## Agents
 
-#### 4. Evidence Desk
-- **SOLO**: ciencia del deporte / hipertrofia / evidencia de nutrición con reclamos fechados + fuentes (Schoenfeld Hypertrophy; Renaissance Diet 2.0; McDonald Stubborn Fat; revisiones).
-- **Salida**: pregunta → 3–7 bullets reclamo+fuente+año → 1–2 líneas implicación práctica (no reescribe rutina completa).
-- Physique Desk traduce en plan.
+### 1. Physique Desk (hub)
 
-### Arquitectura
+**Role**: Body recomposition coach — framework assessment, training design (strength/hypertrophy), nutrition anchoring, progression, weekly tracker, recovery orchestration.
+
+**Framework**: 8 modular prompts (analyze frame → training design → recomp nutrition → meal guide → progression → weekly tracker → recovery → complete system).
+
+**Owns**:
+- A/B/C training split (upper/lower/full-body)
+- Progressive overload rules
+- Macro anchors (~170 g protein practical floor; gym carbs 120–150 g cooked starch, rest ~100 g)
+
+**Anti-jobs**: Fantasy NFL / Polymarket; inventing medical labs; prescribing medications; external posts without authorization; changing macro anchors without user request.
+
+**Voice**: Spanish (default for USER), clear, actionable, no hype.
+
+### 2. Load & Recovery
+
+**One job**: Interpret Garmin Connect MCP data (sleep, steps, HRV, body battery, stress, readiness, activities, training status) → traffic light + 1–3 weekly adjustments.
+
+**Framework**: measured → fatigue meaning → change (volume, timing, LISS, sleep, deload).
+
+**Rules**:
+- Silent if no useful Garmin sync
+- Never medical diagnosis/prescription
+- Garmin strength duration is NOT a proxy for volume (Garmin doesn't capture sets/reps)
+
+### 3. Recomp Nutrition
+
+**One job**: Convert anchors into daily food — flexible menus, portion equivalents, shopping lists, cravings/alcohol management, portion micro-adjustments from weight/waist/photo reports.
+
+**Does NOT change**: Calorie/protein anchors or training split alone (Physique Desk owns those).
+
+**Uses**: MyFitnessPal MCP when diary exists; compares vs ~170 g protein.
+
+### 4. Evidence Desk
+
+**One job**: Sport science / hypertrophy / nutrition evidence with dated claims + sources.
+
+**Sources**: Literature in `knowledge/` (Schoenfeld Hypertrophy; Renaissance Diet 2.0; McDonald Stubborn Fat); systematic reviews.
+
+**Output**:
+- Question → 3–7 bullets (claim + source + year)
+- 1–2 lines practical implication (does NOT rewrite full routine)
+
+**Physique Desk** translates evidence into concrete plan.
+
+---
+
+## Architecture
 
 ```
 agents/physique/
 ├── desk/              # Physique Desk (hub)
-├── load-recovery/     # Load & Recovery
-├── recomp-nutrition/  # Recomp Nutrition
-└── evidence-desk/     # Evidence Desk
+│   ├── prompts/       # 8 modular prompts (01-marco.md through 08-sistema-completo.md)
+│   ├── README.md
+│   ├── persona.md
+│   ├── CONTEXT.md
+│   └── tools.md
+├── load-recovery/     # Load & Recovery specialist
+├── recomp-nutrition/  # Recomp Nutrition specialist
+└── evidence-desk/     # Evidence Desk specialist
 ```
 
-Cada bot incluye: `README.md`, `persona.md`, `CONTEXT.md`, `tools.md`.  
-Physique Desk incluye además `prompts/01-08.md` (framework de 8 prompts).
-
-### SOP
-
-Flujo documentado en `docs/SOP.md`:
-- **Usuario**: registra gym en Hevy (cuando esté listo), comida en MFP, usa Garmin.
-- **Physique Desk**: hub — división, progresión, anclajes de macros.
-- **Load & Recovery**: Garmin → semáforo + 1–3 ajustes.
-- **Recomp Nutrition**: menús/intercambios dentro de anclajes; MFP vs proteína.
-- **Evidence Desk**: papers bajo demanda.
-- **Chief**: triage general solamente.
-
-**Cadencia**:
-- Domingo ~9:11 America/Mexico_City: revisión semanal Garmin (la rutina vive en Physique Desk).
-- On-demand: "¿qué hoy?", menú, pase de carga, evidencia.
-- Después de registro Hevy → nota de progresión Desk.
-- Después de días de diario MFP → brechas Recomp Nutrition.
-
-### Conectores
-
-Ver `docs/CONNECTORS.md` para mapa de conectores (solo nombres — sin secretos).
-
-### Privacidad
-
-Este repositorio público contiene **cero**:
-- Claves API, cookies, tokens OAuth
-- Correos electrónicos, números de teléfono
-- Series de peso real, volcados HRV, diarios de comida
-- IDs de entrenamiento de cuentas en vivo
-
-Usa placeholders de ejemplo donde sea necesario (`USER`, `~170 g proteína`, `gym tarde`).
-
-### Licencia
-
-MIT — ver `LICENSE`.
-
-### Pendiente (TODO documentado, no inventado)
-
-- Subir rutinas A/B/C + core a Hevy cuando el usuario lo solicite.
-- Primeros registros reales Hevy/MFP para cerrar el ciclo.
+Each bot includes: `README.md`, `persona.md`, `CONTEXT.md`, `tools.md`.
 
 ---
 
-## Documentación adicional
+## Standard Operating Procedure
 
-- `docs/SOP.md` — workflow completo.
-- `docs/PERSONA_VS_CODE.md` — persona Grok (en vivo) vs este repo (versionado).
-- `docs/CONNECTORS.md` — mapa de conectores, sin secretos.
-- `agents/physique/<bot>/` — README, persona, contexto, herramientas por bot.
+Full workflow documented in `docs/SOP.md`:
+
+### Roles
+- **User**: Logs gym in Hevy (when ready), food in MyFitnessPal, wears Garmin.
+- **Physique Desk**: Hub — split, progression, macro anchors.
+- **Load & Recovery**: Garmin → traffic light + 1–3 adjustments.
+- **Recomp Nutrition**: Menus/swaps within anchors; MFP vs protein.
+- **Evidence Desk**: Papers on demand.
+- **Chief**: General triage only (NOT recomp owner).
+
+### Cadence
+- **Weekly**: Sunday ~9:11 America/Mexico_City — Garmin review (routine lives in Physique Desk).
+- **On-demand**: "What today?", daily menu, fatigue check, evidence questions.
+- **After Hevy log**: Progression feedback from Desk.
+- **After MFP diary days**: Gap analysis from Recomp Nutrition.
+
+### Data Sources (no double-counting)
+
+| Data | Primary Source |
+|------|----------------|
+| Sets/reps (strength) | **Hevy** |
+| Cardio/outdoor | **Strava** or **Garmin** (not both for same effort) |
+| Recovery (sleep, HRV, body battery) | **Garmin** |
+| Food/weight | **MyFitnessPal** |
+
+---
+
+## Connectors
+
+See `docs/CONNECTORS.md` for full connector map (names only — no secrets).
+
+### Pending Connections (live MCPs, awaiting user action)
+
+**Important**: These connections are NOT forgotten — MCPs are connected live, system fully designed, waiting on user action. See `docs/PENDING_CONNECTIONS.md` for complete detail.
+
+#### 1. Hevy MCP: Routine Template Upload
+- ✅ **MCP connected live**
+- ⏳ **Pending**: User request to upload A/B/C + core templates
+- 🎯 **Next step**: User says "upload A/B/C to Hevy" → Physique Desk creates routine templates via Hevy MCP
+- **After upload**: Desk reads Hevy logs for automatic progression feedback
+
+#### 2. MyFitnessPal MCP: Nutrition Loop Closure
+- ✅ **MCP connected live**
+- ⏳ **Pending**: Real diary days from user
+- 🎯 **Next step**: User logs food in MFP (2–3 days minimum)
+- **After first logs**: Recomp Nutrition compares intake vs ~170 g protein anchor, identifies gaps, personalizes recommendations
+
+---
+
+## Knowledge Base
+
+The `knowledge/` directory contains actionable book summaries and literature synthesis for Evidence Desk:
+
+- **`literature-index.md`** — entry point to all knowledge files
+- **`schoenfeld-hypertrophy.md`** — Science and Development of Muscle Hypertrophy (Schoenfeld 2020)
+- **`renaissance-diet-2.md`** — Renaissance Diet 2.0 (Israetel et al. 2020)
+- **`stubborn-fat-mcdonald.md`** — The Stubborn Fat Solution (McDonald 2008)
+- **`recomp-synthesis.md`** — Body recomposition synthesis
+- **`deep-research-evidence-base.md`** — Comprehensive evidence synthesis
+
+**Note**: No full book PDFs (copyright respect). Only actionable summaries and citations.
+
+---
+
+## Privacy
+
+This public repository contains **zero**:
+- API keys, cookies, OAuth tokens
+- Email addresses, phone numbers
+- Real weight series, HRV dumps, food diaries
+- Live account workout IDs
+
+Uses example placeholders where necessary (`USER`, `~170 g protein`, `afternoon gym`).
+
+---
+
+## Documentation
+
+- **`docs/SOP.md`** — Complete workflow and cadence
+- **`docs/CONNECTORS.md`** — Connector map, no secrets
+- **`docs/PENDING_CONNECTIONS.md`** — Hevy/MFP connections: live, designed, awaiting user
+- **`docs/PERSONA_VS_CODE.md`** — Persona (live Grok) vs this repo (versioned)
+- **`knowledge/`** — Literature summaries (Schoenfeld, Renaissance Diet 2.0, McDonald, etc.)
+- **`agents/physique/<bot>/`** — README, persona, context, tools per bot
+
+---
+
+**Last updated**: 2026-09-28
