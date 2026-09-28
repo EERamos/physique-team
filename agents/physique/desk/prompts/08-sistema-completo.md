@@ -26,7 +26,7 @@
 - Physique Desk responde: "Día A (Upper): press banca 3×8–12, remo 3×8–12, press militar 3×8–12, jalones 3×10–15, facepulls 3×15–20, curls 2×10–15, tríceps 2×10–15. Si hiciste 3×12 con 60 kg en press banca la vez pasada, sube a 62.5 kg hoy."
 - **Pre-gym**: 120–150 g almidón cocido (arroz, papa, pasta) 1–2 hrs antes.
 - **Post-gym**: whey + fruta.
-- USER registra sets/reps en **Hevy** (pendiente: primera vez).
+- USER registra sets/reps en **Hevy** (cuando esté listo para logging).
 
 ### Martes (descanso o cardio LISS opcional)
 - **No gym**.

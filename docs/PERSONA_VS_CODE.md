@@ -74,6 +74,15 @@ Order may vary (live-first or repo-first), but both should converge.
 4. **Grant** MCP tools as documented in `tools.md`.
 5. **Update** `docs/SOP.md` and root `README.md` to mention the new bot.
 
+## Current team roster (6 bots)
+
+1. **Physique Desk** (hub) — training, progression, macro anchors
+2. **Load & Recovery** — Garmin traffic light + weekly adjustments
+3. **Recomp Nutrition** — menus, shopping, MFP comparison
+4. **Evidence Desk** — papers on demand
+5. **Labs Prep** — medical labs organization for doctor appointment
+6. **Chief** — general triage (not recomp owner)
+
 ## Testing
 
 - **Live bot testing**: Manual interaction on X/Grok.

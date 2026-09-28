@@ -77,7 +77,7 @@
 - **Estancado 3–4 semanas** = revisa recuperación (Load & Recovery), considera descarga, o ajusta volumen.
 - **Regresión** (peso baja) = probablemente fatiga alta (Load & Recovery) o déficit muy agresivo (revisa calorías).
 
-**Pendiente**: USER necesita registrar en Hevy. Mientras tanto, Physique Desk pregunta "¿subiste peso/reps esta semana?".
+**Cuando USER use Hevy**: progresión de ejercicios se lee automáticamente de Hevy MCP. Mientras tanto, Physique Desk pregunta "¿subiste peso/reps esta semana?".
 
 ## Revisión semanal (domingo o lunes)
 

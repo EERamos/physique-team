@@ -9,7 +9,8 @@ This document lists the MCP connectors used by the Physique Team bots **by name 
 | `user-garmin` (Garmin MCP) | Load & Recovery | Sleep, steps, HRV, body battery, stress, readiness, activities, training status | Sunday weekly check ~9:11 America/Mexico_City |
 | `user-strava` / Strava MCP | Load & Recovery (secondary), Physique Desk | Cardio/outdoor activities | Do not double-count with Garmin for same activity |
 | `user-myfitnesspal` / mfp-mcp | Recomp Nutrition | Food diary, weight tracking | Compares daily protein vs ~170 g anchor |
-| `user-hevy` / hevy-mcp | Physique Desk | Strength sets/reps | Pending: upload A/B/C + core routines when user asks |
+| `user-hevy` / hevy-mcp | Physique Desk | Strength sets/reps | Ready to upload A/B/C + core routines when user asks |
+| User-uploaded files | Labs Prep | Medical labs/analyses | No live clinical connector — user uploads PDF/images |
 
 ## Connector-bot matrix
 
@@ -31,6 +32,11 @@ This document lists the MCP connectors used by the Physique Team bots **by name 
 ### Evidence Desk
 - **No live data connectors**.
 - Purely paper/research lookup (see `knowledge/` for book summaries: Schoenfeld, Renaissance Diet 2.0, McDonald, systematic reviews).
+
+### Labs Prep
+- **User-uploaded files** (PDFs, images, documents from medical labs).
+- **No live clinical connector** (no API to lab systems).
+- Organizes labs into inventory + questions for doctor appointment.
 
 ## Important notes
 
@@ -55,13 +61,6 @@ If you are setting up your own Physique Team clone:
 2. Grant connector access to the relevant Grok Bots.
 3. **Never commit** API keys, tokens, or user-specific identifiers to version control.
 
-## Pending connector work (TODO)
-
-**IMPORTANT**: These connections are NOT forgotten — MCPs are connected live, system fully designed, waiting on user action / first logs. See `docs/PENDING_CONNECTIONS.md` for full detail.
-
-- **Hevy routine upload**: ✅ MCP connected. User needs to say "upload A/B/C to Hevy" → bot uses Hevy MCP to create routine templates. After upload, Desk reads Hevy logs for progression feedback.
-- **First real logs**: ✅ MyFitnessPal MCP connected. Once user logs strength in Hevy and food in MFP, close-the-loop feedback from bots becomes possible. Recomp Nutrition compares diary vs ~170 g protein anchor.
-
 ---
 
-**Last updated**: 2026-09-28 (initial scaffold)
+**Last updated**: 2026-09-28

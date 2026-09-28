@@ -9,7 +9,6 @@ Conectores MCP que Physique Desk usa o a los que delega.
 - **Cuándo**: 
   - USER termina sesión de gym → Physique Desk lee progresión (peso × reps) y da feedback.
   - USER pide "sube rutinas A/B/C a Hevy" → Physique Desk crea templates de rutina.
-- **Pendiente**: primera carga de rutinas (A/B/C + core) cuando USER lo solicite.
 
 ### user-strava (Strava MCP) — secundario
 - **Propósito**: leer actividades de cardio/outdoor (correr, ciclismo, caminata).

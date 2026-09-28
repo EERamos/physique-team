@@ -38,11 +38,11 @@ Contexto genérico de coaching para USER. **Sin datos personales específicos** 
 - **Fotos**: opcionales (frente/espalda/lado, misma iluminación, cada 2–4 semanas).
 - **Progresión de ejercicios**: peso × reps en movimientos clave (sentadilla, press banca, peso muerto rumano, hip thrust) — registrados en Hevy cuando USER lo use.
 
-## Pendiente (no datos reales aún)
+## Hevy & MyFitnessPal MCP usage
 
-- **Primera carga de rutinas en Hevy**: USER pedirá cuando esté listo.
-- **Primeros registros de sets/reps en Hevy**: cerrará ciclo de feedback de progresión.
-- **Primeros registros de comida en MyFitnessPal**: Recomp Nutrition podrá comparar vs ~170 g proteína.
+- **Hevy MCP**: Ready to upload A/B/C + core routines when USER asks.
+- **First Hevy logs**: Once USER registers sets/reps, enables progression feedback cycle.
+- **First MFP diary days**: Once USER logs food, Recomp Nutrition can compare vs ~170 g protein.
 
 ---
 
