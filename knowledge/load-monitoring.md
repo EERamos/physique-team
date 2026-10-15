@@ -12,8 +12,11 @@ Subir la carga demasiado rápido se asocia con lesiones y enfermedad, pero las r
 
 - Maupin et al. 2020. The Relationship Between Acute:Chronic Workload Ratios and Injury Risk in Sports: A Systematic Review. *Open Access J Sports Med*. https://doi.org/10.2147/OAJSM.S231405
 - Schwellnus et al. 2016. How much is too much? (Part 2) IOC consensus statement on load in sport and risk of illness. *Br J Sports Med*. https://doi.org/10.1136/bjsports-2016-096572
-- Saw et al. 2016. Monitoring the athlete training response: subjective self-reported measures trump commonly used objective measures. *Br J Sports Med*. https://doi.org/10.1136/bjsports-2015-094758
-- Haddad et al. 2017. Session-RPE Method for Training Load Monitoring. *Front Neurosci*. https://doi.org/10.3389/fnins.2017.00612
+
+## Fuentes citadas sin cotejo completo
+
+- Saw et al. 2016. Monitoring the athlete training response: subjective self-reported measures trump commonly used objective measures. *Br J Sports Med*. https://doi.org/10.1136/bjsports-2015-094758 Cotejado solo el título.
+- Haddad et al. 2017. Session-RPE Method for Training Load Monitoring. *Front Neurosci*. https://doi.org/10.3389/fnins.2017.00612 No cotejado en detalle.
 
 ## Qué cuenta como carga
 

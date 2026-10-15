@@ -63,7 +63,7 @@ Metaanálisis de 99 estudios (Dupuy 2018):
 
 - No existe un número de horas de sueño para atletas. El rango de adultos sanos es de 7 a 9, y se supone que el atleta necesita más.
 - Dormir mal afecta más el ejercicio de la tarde que el de la mañana.
-- La falta de sueño sube el riesgo de enfermar.
+- La falta de sueño es uno de los factores de estrés que, sumados, suben el riesgo de enfermar.
 - Para el dolor muscular, lo más efectivo es el masaje. El estiramiento no ayuda.
 - El agua fría como rutina frena las ganancias de fuerza.
 - Para vigilar la recuperación, cómo se siente el atleta dice más que los aparatos.

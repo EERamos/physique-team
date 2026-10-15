@@ -64,7 +64,7 @@ Sobre el DEXA (Kasper 2021):
 - **Con pliegues, usar la suma en milímetros**, no el porcentaje convertido. Convertir a porcentaje con una ecuación se desaconseja; la suma de 8 pliegues es más exacta y confiable, y concuerda bien con el DEXA (Kasper 2021).
 - Límite de la suma de pliegues: no permite estimar la masa libre de grasa (Kasper 2021).
 - **Creer en un cambio solo si supera el margen del método.** En DEXA, ese margen (cambio mínimo significativo) fue de 465 a 775 g de masa grasa en atletas hombres medidos el mismo día (nota; Hind 2018).
-- El DEXA no sirve para revisiones mensuales (nota).
+- El DEXA rara vez justifica medir cada mes, por costo y por margen de error (nota).
 - La bioimpedancia puede servir para ver cambio si se estandariza el método, aunque varía mucho entre aparatos (Kasper 2021).
 
 ## Cómo lo aplica el tracker
