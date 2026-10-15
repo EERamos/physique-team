@@ -27,7 +27,7 @@ Physique Desk **NO lee Garmin directamente** — delega 100% a **Load & Recovery
 2. **Load & Recovery** genera **semáforo + 1–3 ajustes**:
    - **Verde**: todo bien, mantén plan actual.
    - **Amarillo**: 1–2 ajustes ligeros (ej: baja 1–2 sets, agrega 20 min LISS, prioriza sueño).
-   - **Rojo**: 2–3 ajustes fuertes (ej: descarga, quita 1 día de gym, cardio solo, duerme más).
+   - **Rojo**: 2–3 ajustes fuertes (ej: descarga, quita 1 día de gym, cardio solo, duerme más). Solo cuando una señal de Garmin coincide con una de USER (energía, dolor, motivación o sRPE) durante 3 o más días. Garmin solo llega a amarillo.
 
 3. **Physique Desk** recibe semáforo + ajustes y actualiza plan semanal:
    - Verde → no cambio.
@@ -43,8 +43,8 @@ Physique Desk **NO lee Garmin directamente** — delega 100% a **Load & Recovery
 
 ### HRV (heart rate variability)
 - **Objetivo**: estable o subiendo vs baseline personal.
-- **Problema**: HRV baja -10% o más vs baseline → sistema nervioso fatigado.
-- **Ajuste**: descarga (reduce peso o volumen), agrega LISS (recuperación activa), prioriza sueño.
+- **Problema**: HRV baja -10% o más vs baseline → posible fatiga. Sola, es amarillo; con fatiga reportada por USER varios días, es rojo.
+- **Ajuste**: amarillo → baja volumen, agrega LISS, prioriza sueño. Rojo → descarga.
 
 ### Body battery (Garmin)
 - **Objetivo**: llega a 100 cada noche.

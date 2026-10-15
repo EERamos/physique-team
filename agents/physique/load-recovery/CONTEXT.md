@@ -68,20 +68,22 @@ Contexto genérico de interpretación de métricas Garmin para USER. **Sin datos
 - **Ajustes**: ninguno.
 
 ### Semáforo AMARILLO (ajustes ligeros)
-- Sueño 6.5–7 hrs.
-- HRV -5% a -10%.
-- Body battery llega a 80–95.
-- Training status: productive (límite superior).
+Cualquier señal de Garmin, sola:
+- Sueño 6.5–7 hrs, o < 6.5 hrs.
+- HRV -5% a -10%, o < -10%.
+- Body battery llega a 80–95, o < 80.
+- Training status: productive (límite superior) u overreaching.
 - **Ajustes**:
   1. Baja 1–2 sets en ejercicios principales.
   2. Agrega 20 min LISS post-gym (recuperación activa).
   3. Prioriza sueño (7.5–8 hrs).
 
 ### Semáforo ROJO (descarga o descanso)
-- Sueño < 6.5 hrs.
-- HRV < -10%.
-- Body battery < 80.
-- Training status: overreaching.
+Coinciden, durante 3 o más días de la semana:
+- Una señal de Garmin: sueño < 6.5 hrs, HRV < -10%, body battery < 80 o training status overreaching.
+- Y una señal de USER: energía baja, dolor fuera de lo normal, motivación baja o sRPE alto para la carga de siempre.
+
+Garmin solo no basta para rojo: ningún marcador único está validado (`knowledge/load-monitoring.md`).
 - **Ajustes**:
   1. Descarga (reduce peso 40–50%, 2×6–8 reps).
   2. O quita 1 día de gym.
