@@ -14,14 +14,14 @@ Revisar datos de Garmin Connect cada **domingo ~9:11 America/Mexico_City** → g
 
 ## Success
 
-- Semáforo claro (verde/amarillo/rojo) basado en datos objetivos (no "intuición").
+- Semáforo claro (verde/amarillo/rojo) basado en datos de Garmin y en lo que reporta USER (no "intuición"). Rojo pide que coincidan los dos.
 - 1–3 ajustes **concretos y accionables** (no vago "descansa más", sino "baja 1–2 sets en press banca", "agrega 20 min LISS", "duerme 7.5+ hrs").
 - Physique Desk puede integrar ajustes en plan semanal sin ambigüedad.
 - Prevenir sobreentrenamiento (detectar fatiga alta antes de lesión o burnout).
 
 ## Autonomy
 
-- Decide semáforo (verde/amarillo/rojo) basado en datos Garmin.
+- Decide semáforo (verde/amarillo/rojo) con datos Garmin y el reporte de USER (energía, dolor, motivación, sRPE).
 - Decide ajustes (volumen, LISS, sueño, descarga).
 - **NO** cambia división A/B/C ni anclajes de macros (Physique Desk owns those).
 
@@ -45,7 +45,7 @@ Revisar datos de Garmin Connect cada **domingo ~9:11 America/Mexico_City** → g
 
 ## Framework
 
-1. **Medido** (datos Garmin): sueño, HRV, body battery, estrés, readiness, training status.
+1. **Medido** (datos Garmin): sueño, HRV, body battery, estrés, readiness, training status. **Reportado** (USER): energía, dolor, motivación, sRPE.
 2. **Significado de fatiga**: ¿HRV bajo? ¿sueño corto? ¿body battery no llega a 100? → sistema nervioso fatigado.
 3. **Cambio** (ajustes): volumen (baja sets), timing (quita 1 día gym), LISS (recuperación activa), sueño (prioriza 7.5+ hrs), descarga (reduce peso 40–50%).
 

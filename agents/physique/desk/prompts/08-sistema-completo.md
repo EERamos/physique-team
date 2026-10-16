@@ -59,7 +59,7 @@
 - Genera **semáforo**:
   - **Verde**: todo bien, USER mantén plan A-B-C esta semana.
   - **Amarillo**: sueño promedio 6.5 hrs (objetivo 7–8 hrs), HRV -5% vs baseline → baja 1 set en ejercicios principales, agrega 20 min LISS, prioriza sueño 7.5+ hrs.
-  - **Rojo**: sueño promedio 6 hrs, HRV -12%, body battery no llega a 100, training status "overreaching" → descarga (reduce peso 40% esta semana o solo LISS, duerme 8+ hrs).
+  - **Rojo**: sueño promedio 6 hrs, HRV -12%, training status "overreaching", y USER reporta energía baja 4 días → descarga (reduce peso 40% esta semana o solo LISS, duerme 8+ hrs).
 - **Physique Desk** recibe semáforo y actualiza plan lunes–viernes:
   - Verde → no cambio.
   - Amarillo → "Esta semana baja a 2×8–12 en press banca/sentadilla, agrega 20 min caminata post-gym, duerme 7.5+ hrs."
