@@ -150,6 +150,13 @@ The `knowledge/` directory contains actionable book summaries and literature syn
 - **`stubborn-fat-mcdonald.md`** — The Stubborn Fat Solution (McDonald 2008)
 - **`recomp-synthesis.md`** — Body recomposition synthesis
 - **`deep-research-evidence-base.md`** — Comprehensive evidence synthesis
+- **`load-monitoring.md`** — Training load: ACWR and the 10% rule under dispute, sRPE, subjective measures (Load & Recovery)
+- **`sleep-recovery.md`** — Sleep loss and post-exercise recovery techniques (meta-analyses)
+- **`concurrent-training.md`** — Strength + cardio interference, order and separation
+- **`body-fat-measurement.md`** — Error by method; compare only same method, same conditions
+- **`energy-deficiency-reds.md`** — Relative Energy Deficiency in Sport (IOC 2023), focus on men
+- **`supplements-hydration.md`** — IOC/ISSN supplements with evidence, doses, hydration basics
+- **`medical-red-flags.md`** — When every bot stops and refers to a doctor
 
 **Note**: No full book PDFs (copyright respect). Only actionable summaries and citations.
 
